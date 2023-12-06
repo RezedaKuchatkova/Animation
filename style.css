@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2d00c;
+}
+
+.wrapper {
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 50px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background-color: transparent;
+    border-radius: 50px;
+    rotate: 90deg;
+    animation: turn 18s linear infinite;
+}
+
+{
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.container_2 {
+    rotate: 30deg;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.container_3 {
+    rotate: -30deg;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.oval {
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    border: 7px solid #f20c0c;
+    border-left: 11px solid #f20c0c;
+    border-right: 11px solid #f20c0c;
+    border-radius: 50%;
+    position: absolute;
+    transform: scalex(.5);
+    box-shadow: 0 0 25px 0 #f20c0c;
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(27, 204, 71);
+    border-radius: 50%;
+    border: 2px solid rgb(246, 247, 247);
+    top: 138px;
+    left: 137px;
+    transform: scale(2, 1);
+    animation: rotation-zero 3s linear infinite;
+}
+
+.circle_2 {
+    background-color: rgb(0, 0, 255);
+    animation: rotation-zero 4.5s linear infinite;
+}
+
+.circle_3 {
+    background-color: rgb(0, 255, 242);
+    animation: rotation-zero 6s linear infinite;
+}
+
+@keyframes rotation-zero {
+    from {
+        transform: rotate(0deg) translate(154px) scale(1.8);
+    }
+
+    to {
+        transform: rotate(360deg) translate(154px) scale(1.8);
+    }
+}
